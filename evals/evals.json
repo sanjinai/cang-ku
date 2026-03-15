@@ -1,0 +1,71 @@
+{
+  "skill_name": "prd-for-vibe-coding",
+  "test_cases": [
+    {
+      "id": "test_001",
+      "name": "Vague idea - meeting notes organizer",
+      "prompt": "I want to make a tool to help me organize my meeting notes",
+      "expected_behavior": "Should guide user through clarifying questions about target user, current pain points, core features, non-goals, and tech stack. Should produce a concise one-page PRD.",
+      "success_criteria": [
+        "Asks clarifying questions about user and problem",
+        "Identifies 3-5 core features",
+        "Lists explicit non-goals",
+        "Suggests appropriate tech stack",
+        "Generates PRD using the template format"
+      ]
+    },
+    {
+      "id": "test_002",
+      "name": "Specific idea - expense tracker",
+      "prompt": "Help me write a PRD for a simple expense tracker. I'm a freelancer and I need to track business expenses for tax season. Right now I use a spreadsheet but I always forget to update it.",
+      "expected_behavior": "Should recognize user has already provided context (target user, problem, current state) and focus on extracting core features, non-goals, and tech recommendations.",
+      "success_criteria": [
+        "Acknowledges existing context without re-asking",
+        "Extracts core features from description",
+        "Suggests non-goals appropriate for a simple prototype",
+        "Recommends lightweight tech stack",
+        "Generates complete PRD"
+      ]
+    },
+    {
+      "id": "test_003",
+      "name": "Overly ambitious scope",
+      "prompt": "I want to build a social network for developers with real-time chat, video calls, code collaboration, job board, and AI-powered matching",
+      "expected_behavior": "Should push back constructively on scope, help user identify the core MVP, and guide them to start with one focused feature set.",
+      "success_criteria": [
+        "Identifies scope is too large",
+        "Asks user to prioritize core feature",
+        "Suggests starting with MVP",
+        "Helps narrow down to 3-5 features",
+        "Lists many items as non-goals for v1"
+      ]
+    },
+    {
+      "id": "test_004",
+      "name": "User with partial PRD",
+      "prompt": "I started writing a PRD for a bookmark manager. Here's what I have: Target user is me, a researcher who saves 50+ articles per week. Core features: save links, tag them, search. What else do I need?",
+      "expected_behavior": "Should read existing PRD, identify missing sections (non-goals, tech stack, success criteria), and fill in gaps without starting from scratch.",
+      "success_criteria": [
+        "Acknowledges existing PRD content",
+        "Identifies missing sections",
+        "Asks targeted questions for gaps",
+        "Completes PRD without redundant questions",
+        "Maintains user's existing content"
+      ]
+    },
+    {
+      "id": "test_005",
+      "name": "Non-technical user",
+      "prompt": "I'm not a developer but I want to make a simple website to showcase my photography portfolio. I have about 100 photos organized in folders.",
+      "expected_behavior": "Should recognize non-technical user and suggest simpler tech stack (static site generator, no complex backend). Should explain tech choices in accessible language.",
+      "success_criteria": [
+        "Suggests beginner-friendly tech stack",
+        "Avoids complex architecture",
+        "Explains tech choices simply",
+        "Keeps features minimal and achievable",
+        "Generates actionable PRD for AI coding tool"
+      ]
+    }
+  ],
+  "notes": "These test cases cover common scenarios: vague ideas, specific ideas, scope management, partial PRDs, and non-technical users. Each test should result in a complete, actionable PRD that an AI coding tool can execute on."
+}
